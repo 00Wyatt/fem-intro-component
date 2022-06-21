@@ -1,0 +1,247 @@
+/* CSS Custom Properties */
+:root {
+    /* Colors
+    Primary */
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* Accent */
+
+    --blue: hsl(248, 32%, 49%);
+
+    /* Neutral */
+
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+/* Boilerplate styles */
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: var(--red);
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem; /* 16px */
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+*:focus {
+    outline: 2px solid var(--blue);
+}
+
+.attribution {
+    font-size: 0.6875rem; /* 11px */
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Main styles - mobile first */
+.grid-container {
+    background-image: url("/images/bg-intro-mobile.png");
+    min-height: 100vh;
+    padding: 85px 26px;
+    display: grid;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Text content on left (desktop columns) */
+.hero-text {
+    color: white;
+    max-width: 31.25rem; /* 500px */
+    text-align: center;
+    display: grid;
+    gap: 22px;
+}
+
+.hero-text h1 {
+    padding: 0 30px;
+    font-size: 1.625rem; /* 26px */
+    line-height: 1.3;
+}
+
+.hero-form {
+    height: max-content;
+    display: grid;
+    gap: 20px;
+}
+
+/* Blue banner above form */
+.hero-form__price {
+    background: var(--blue);
+    color: var(--grayish-blue);
+    padding: 16px 50px;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 0 rgba(0, 0, 0, 0.2);
+    font-size: 0.9375rem; /* 15px */
+    text-align: center;
+}
+
+.hero-form__price span {
+    color: white;
+    font-weight: 600;
+}
+
+/* Signup form on right (desktop columns) */
+.hero-form__container {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 0 rgba(0, 0, 0, 0.2);
+    display: grid;
+    gap: 15px;
+}
+
+/* Terms and services text */
+.hero-form__consent {
+    color: var(--grayish-blue);
+    padding: 0 20px;
+    font-size: 0.6875rem; /* 11px */
+    line-height: 1.9;
+    text-align: center;
+}
+
+.hero-form__consent a {
+    color: var(--red);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hero-form__consent a:hover {
+    text-decoration: underline;
+}
+
+/* HTML form */
+.form {
+    display: grid;
+    gap: 15px;
+}
+
+.form__input input {
+    position: relative;
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid var(--grayish-blue);
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.form__input::placeholder {
+    color: var(--dark-blue);
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.form__input input:focus {
+    border-color: transparent;
+}
+
+.form__input .show-error {
+    background: url("../images/icon-error.svg") no-repeat right 20px top 50%;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+/* Error text */
+.form__input span {
+    color: var(--red);
+    margin-top: 5px;
+    font-size: 0.6875rem; /* 11px */
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+    display: grid;
+}
+
+.form__submit {
+    background: var(--green);
+    color: white;
+    padding: 21px 0 15px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 0 0 hsl(154, 59%, 45%);
+    font-size: 0.9375rem; /* 15px */
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 125ms ease-in-out;
+}
+
+.form__submit:hover {
+    opacity: 0.7;
+}
+
+/* Tablet styles */
+@media all and (min-width: 500px) {
+    .grid-container {
+        background-image: url("/images/bg-intro-desktop.png");
+    }
+
+    .hero-text h1 {
+        font-size: 2.25rem; /* 36px */
+    }
+
+    .form__field input {
+        padding: 16px 28px;
+    }
+}
+
+/* Desktop styles */
+@media all and (min-width: 1100px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+        align-items: center;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        padding: 0;
+        font-size: 3rem; /* 48px */
+    }
+
+    .hero-form {
+        min-width: 500px;
+    }
+
+    .hero-form__container {
+        padding: 32px 28px;
+    }
+}
