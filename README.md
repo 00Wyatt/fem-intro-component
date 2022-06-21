@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Sign-up Form using Client-side JavaScript Validation](https://www.frontendmentor.io/solutions/signup-form-using-clientside-javascript-validation-cMO8I-udNo)
+- Live Site URL: [Frontend Mentor | Intro component with sign up form](https://00wyatt.github.io/fem-intro-component/)
 
 ## My process
 
