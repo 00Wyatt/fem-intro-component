@@ -72,7 +72,7 @@ input {
 
 /* Main styles - mobile first */
 .grid-container {
-    background-image: url("/images/bg-intro-mobile.png");
+    background-image: url("../images/bg-intro-mobile.png");
     min-height: 100vh;
     padding: 85px 26px;
     display: grid;
@@ -209,7 +209,7 @@ input {
 /* Tablet styles */
 @media all and (min-width: 500px) {
     .grid-container {
-        background-image: url("/images/bg-intro-desktop.png");
+        background-image: url("../images/bg-intro-desktop.png");
     }
 
     .hero-text h1 {
