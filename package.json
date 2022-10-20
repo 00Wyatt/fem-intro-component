@@ -1,0 +1,16 @@
+{
+  "name": "fem-intro-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10"
+  }
+}
